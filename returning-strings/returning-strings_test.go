@@ -1,6 +1,7 @@
 package kata
 
 import (
+	"codewars/tools"
 	"fmt"
 	"testing"
 )
@@ -10,12 +11,6 @@ func Greet(name string) string {
 }
 
 func TestMakeNegative(t *testing.T){
-	Check(Greet("Billy"), "Hello, Billy how are you doing today?", t)
-	Check(Greet(""), "Hello,  how are you doing today?", t)
-}
-
-func Check(got string, want string, t *testing.T) {
-    if got != want {
-        t.Errorf("got %s wanted %s", got, want)
-    }
+	tools.CheckResult(Greet("Billy"), "Hello, Billy how are you doing today?", t)
+	tools.CheckResult(Greet(""), "Hello,  how are you doing today?", t)
 }

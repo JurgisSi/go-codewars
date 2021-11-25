@@ -1,6 +1,7 @@
 package kata
 
 import (
+	"codewars/tools"
 	"testing"
 )
 
@@ -12,13 +13,7 @@ func MakeNegative(x int) int {
 }
 
 func TestMakeNegative(t *testing.T){
-	Check(MakeNegative(4), -4, t)
-	Check(MakeNegative(0), 0, t)
-	Check(MakeNegative(-8), -8, t)
-}
-
-func Check(got int, want int, t *testing.T) {
-    if got != want {
-        t.Errorf("got %d, wanted %d", got, want)
-    }
+	tools.CheckResult(MakeNegative(4), -4, t)
+	tools.CheckResult(MakeNegative(0), 0, t)
+	tools.CheckResult(MakeNegative(-8), -8, t)
 }
