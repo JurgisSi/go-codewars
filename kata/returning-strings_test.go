@@ -10,7 +10,7 @@ func Greet(name string) string {
 	return fmt.Sprintf("Hello, %s how are you doing today?", name);
 }
 
-func TestMakeNegative(t *testing.T){
+func TestGreet(t *testing.T){
 	tools.CheckResult(Greet("Billy"), "Hello, Billy how are you doing today?", t)
 	tools.CheckResult(Greet(""), "Hello,  how are you doing today?", t)
 }
